@@ -17,3 +17,4 @@
  - migrate --> Runs the script
 
 ### .save() is used to add a row in the database.
+ - In context to forms, .save() is available with forms.ModelForm(not with forms.form)
