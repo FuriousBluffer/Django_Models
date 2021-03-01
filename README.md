@@ -6,6 +6,8 @@
   - Field --> Column
   - Class Obj --> Row
     
+ - After you have initialised model(s), you need to migrate those to the database schema.
+
 ### How to migrate the model to a database language?
  - Run the command in using manage.py utils:
 > makemigrations
@@ -17,3 +19,12 @@
  - migrate --> Runs the script
 
 ### .save() is used to add a row in the database.
+
+
+
+### Register your models in the admin.py to use them:
+ > from django.contrib import admin
+ > from trello_app import models
+ > # Register your models here.
+ > admin.site.register(models.Task)
+ > admin.site.register(models.TaskList)

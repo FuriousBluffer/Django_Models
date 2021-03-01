@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+    <h1>All Lists</h1>
+    <ul>
+        {% for task_list in task_lists %}
+            <li>{{ task_list.name }}</li>
+        {% endfor %}
+    </ul>
+<h1>All Tasks</h1>
+    <ul>
+        {% for task in tasks %}
+            <li>{{ task.content }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

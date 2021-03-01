@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task List</title>
+</head>
+<body>
+    <h1>Add Task List</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        Name: <input type="text" name="name" />
+        Created At: <input type="datetime-local" name="created_at" />
+        <input type="submit" name="submit" value="Add Task List" />
+    </form>
+</body>
+</html>
