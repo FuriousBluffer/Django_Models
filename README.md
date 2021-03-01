@@ -19,12 +19,11 @@
  - migrate --> Runs the script
 
 ### .save() is used to add a row in the database.
-
-
-
+ - In context to forms, .save() is available with forms.ModelForm(not with forms.form)
+ 
 ### Register your models in the admin.py to use them:
  > from django.contrib import admin
  > from trello_app import models
  > # Register your models here.
- > admin.site.register(models.Task)
  > admin.site.register(models.TaskList)
+ > admin.site.register(models.Task)
