@@ -14,7 +14,7 @@
 <h1>All Tasks</h1>
     <ul>
         {% for task in tasks %}
-            <li>{{ task.content }}</li>
+            <li>{{ task.content }} <b>contained in</b> {{ task.task_list }}</li>
         {% endfor %}
     </ul>
 </body>

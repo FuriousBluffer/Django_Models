@@ -1,9 +1,10 @@
 from django.shortcuts import render, redirect
 from .models import Task, TaskList
 from .forms import TaskListForm, TaskForm
-
+from django.contrib.auth.models import User
 
 # Create your views here.
+
 
 def index(request):
     tasks = Task.objects.all()
@@ -15,7 +16,7 @@ def add_task_list(request):
     if request.method == 'POST':
         name = request.POST['name']
         created_at = request.POST['created_at']
-        task_list = TaskList(name=name, created_at=created_at)
+        task_list = TaskList(name=name, created_at=created_at, user1=request.user)
         task_list.save()
         return redirect('/')
     return render(request, 'trello_app/add_task_list.html')

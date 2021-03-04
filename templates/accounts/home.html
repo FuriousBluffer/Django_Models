@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+    <h1>Welcome to To-Do App</h1>
+    {% if user.is_authenticated %}
+        <p><a href="{% url 'logout' %}">Logout</a></p>
+    {% else %}
+        <p><a href="{% url 'login' %}">Login</a></p>
+    {% endif %} 
+
+    <p><a href="{% url 'register' %}">Register</a></p>
+</body>
+</html>
